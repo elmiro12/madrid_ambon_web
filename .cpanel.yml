@@ -1,0 +1,16 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/cbtsmpam/qrhadir.my.id
+
+    # core application code
+    - /bin/cp -R app $DEPLOYPATH/
+    - /bin/cp -R bootstrap $DEPLOYPATH/
+    - /bin/cp -R resources $DEPLOYPATH/
+    - /bin/cp -R routes $DEPLOYPATH/
+
+    #build files
+    - /bin/cp -R public/build $DEPLOYPATH/
+
+    # root files (tanpa config & env)
+    - /bin/cp artisan composer.json composer.lock $DEPLOYPATH/ 2>/dev/null || true
