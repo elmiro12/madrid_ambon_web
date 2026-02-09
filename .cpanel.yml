@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/cbtsmpam/qrhadir.my.id
+    - export DEPLOYPATH=/home/cbtsmpam/madridambon.my.id
 
     # core application code
     - /bin/cp -R app $DEPLOYPATH/
